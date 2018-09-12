@@ -5,7 +5,7 @@
  */
 
 package jobsheet07;
-
+import java.util.Scanner;
 /**
  *
  * @author netammaula
@@ -19,10 +19,20 @@ public class HitungFibonacci {
   
     }
     
+    private static int tampilInput()    {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Bilangan ke-: ");
+        int n = scanner.nextInt();
+        
+        return n;
+    }
+    
     public static void main(String[] args)  {
         
         String identitas = "Neta Minkhatul Maula / X RPL 3/ 31";
         
         tampilJudul(identitas);
+        int n = tampilInput();
     }
 }
