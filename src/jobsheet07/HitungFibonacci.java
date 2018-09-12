@@ -5,6 +5,7 @@
  */
 
 package jobsheet07;
+import java.math.BigInteger;
 import java.util.Scanner;
 /**
  *
@@ -28,11 +29,26 @@ public class HitungFibonacci {
         return n;
     }
     
+    private static BigInteger fibo(int n)   {
+        
+        BigInteger[] hasil = new BigInteger[n];
+        
+        hasil[0] = BigInteger.ONE;
+        hasil[1] = BigInteger.ONE;
+        
+        for (int i = 2; i < n; i++) {
+            hasil[1] = hasil[i-1].add(hasil[1-2]);
+        }
+        
+        return hasil[n-1];
+    }
+    
     public static void main(String[] args)  {
         
         String identitas = "Neta Minkhatul Maula / X RPL 3/ 31";
         
         tampilJudul(identitas);
         int n = tampilInput();
+        BigInteger hasil = fibo(n);
     }
 }
