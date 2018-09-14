@@ -43,6 +43,10 @@ public class HitungFibonacci {
         return hasil[n-1];
     }
     
+    private static void tampilHasil(int n, BigInteger hasil)    {
+        System.out.println("Bilangan Fibonacci ke-"+n+" : " + hasil);
+    }
+    
     public static void main(String[] args)  {
         
         String identitas = "Neta Minkhatul Maula / X RPL 3/ 31";
@@ -50,5 +54,7 @@ public class HitungFibonacci {
         tampilJudul(identitas);
         int n = tampilInput();
         BigInteger hasil = fibo(n);
+        tampilHasil(n, hasil);
+        
     }
 }
